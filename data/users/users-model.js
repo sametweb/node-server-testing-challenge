@@ -12,7 +12,7 @@ function find() {
 
 function add(user) {
   return db("users")
-    .insert(user)
+    .insert(user, "id")
     .then(([id]) => db("users").where({ id }).first());
 }
 
