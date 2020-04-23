@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
         res.status(201).json(addedUser);
       })
       .catch((error) => {
-        res.status(500).json({ errorMessage: error.message });
+        res.status(500).json({ errorMessage: "Error adding user" });
       });
   } else {
     res
